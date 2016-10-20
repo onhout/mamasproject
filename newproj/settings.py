@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'require',
+    'djangobower',
 
 ]
 
@@ -135,8 +136,20 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'djangobower.finders.BowerFinder',
+)
+
 # STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 REQUIRE_BASE_URL = "/bower_components/requirejs/"
 REQUIRE_JS = "require.js"
+
+BOWER_INSTALLED_APPS = (
+    'bootstrap',
+    'jquery',
+    'requirejs'
+)
