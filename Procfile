@@ -1,1 +1,1 @@
-web: gunicorn newproj.wsgi --log-file -
+web: gunicorn mamasproject.wsgi --log-file -
