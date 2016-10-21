@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'require',
     'djangobower',
-
 ]
 
 MIDDLEWARE = [
@@ -142,7 +141,7 @@ STATICFILES_FINDERS = (
     'djangobower.finders.BowerFinder',
 )
 
-# STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
+STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 REQUIRE_BASE_URL = "bower_components/requirejs/"

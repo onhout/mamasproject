@@ -3,7 +3,17 @@ doctype html
 html(lang="en")
 	{% load require %}
 	head
+		link(href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" type="text/css", rel="stylesheet")
+		link(href="{% static 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css' %}" type="text/css", rel="stylesheet")
 		{% require_module '../../app' %}
 		title="Sup"
 	body
-		h1 WELL THEN I'M CHANGING THIS
+		nav.navbar.navbar-default
+			div.container
+				div.navbar-header
+					button.navbar-toggle.collapse(type="button", data-toggle="collapse", data-target="#menu-collapse", aria-expanded="false")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") Mama's Kitchen
