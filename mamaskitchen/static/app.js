@@ -4,7 +4,7 @@ requirejs.config({
 		jquery: 'jquery/dist/jquery',
 		bootstrap: 'bootstrap/dist/js/bootstrap',
 		react: 'react/react',
-		react_dom: 'react/react-dom',
+		react_dom: 'react/react-dom'
 	},
 	shim:{
 		bootstrap:{
@@ -16,8 +16,8 @@ requirejs.config({
 			exports: ['Reactdom']
 		}
 	}
-})
+});
 
 require(['jquery','bootstrap', 'react', 'react_dom'], function(){
 
-})
+});

@@ -21,3 +21,19 @@ class MenuItem(models.Model):
 class MenuPicURL(models.Model):
     itemurl = models.ForeignKey(MenuItem, on_delete=models.CASCADE)
     url = models.CharField(max_length=200)
+
+
+class FoodType(models.Model):
+    name = models.CharField(max_length=200)
+    type = models.ManyToManyField(MenuItem, through="FoodItemRelationship")
+
+    def __unicode__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+
+
+class FoodItemRelationship(models.Model):
+    type = models.ForeignKey(FoodType)
+    item = models.ForeignKey(MenuItem)
