@@ -15,19 +15,17 @@ class TypeTabular(admin.TabularInline):
 
 class MenuItemModelAdmin(admin.ModelAdmin):
     list_display = ("title", "price", "amount", "created_at")
-    inlines = [
+    inlines = (
         ItemURLInline,
         TypeTabular,
-    ]
+    )
 
     class Meta():
         model = MenuItem
 
 
 class FoodTypeModelAdmin(admin.ModelAdmin):
-    inlines = (
-        TypeTabular,
-    )
+    inlines = (TypeTabular,)
 
 admin.site.register(MenuItem, MenuItemModelAdmin)
 admin.site.register(FoodType, FoodTypeModelAdmin)

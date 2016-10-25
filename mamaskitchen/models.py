@@ -36,4 +36,4 @@ class FoodType(models.Model):
 
 class FoodItemRelationship(models.Model):
     type = models.ForeignKey(FoodType)
-    item = models.ForeignKey(MenuItem)
+    item = models.ForeignKey(MenuItem, related_name='items')

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% load require %}
+<head>
+    <link href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" />
+    <link href="{% static 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css' %}" type="text/css" rel="stylesheet"/>
+    {% require_module '../../app' %}
+    <title>Sup</title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapse" type="button" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false" ></button>
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <a href="#" class="navbar-brand" id="menu-collapse"> Mama's Kitchen</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Menu <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% for type in types %}
+                                <li><a href="type/{{ type.id }}">{{ type.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+
+</html>
