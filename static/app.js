@@ -1,5 +1,5 @@
 requirejs.config({
-	baseUrl: '/static/bower_components',
+	baseUrl: '../static/bower_components',
 	paths: {
 		jquery: 'jquery/dist/jquery',
 		bootstrap: 'bootstrap/dist/js/bootstrap',

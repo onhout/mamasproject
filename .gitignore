@@ -89,4 +89,4 @@ ENV/
 # Rope project settings
 .ropeproject
 
-mamaskitchen/static/bower_components
+/static/bower_components

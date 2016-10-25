@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('mamaskitchen.urls')),
+    url(r'^login/', include('userauth.urls')),
 ]
