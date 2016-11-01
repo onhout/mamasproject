@@ -90,3 +90,5 @@ ENV/
 .ropeproject
 
 /static/bower_components
+
+.DS_Store

@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'mamaskitchen.apps.MamaskitchenConfig',
-    'userauth',
+    'userauth.apps.UserauthConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

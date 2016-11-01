@@ -39,7 +39,7 @@ class TypeOfFood(Menu):
         context = super(TypeOfFood, self).get_context_data(**kwargs)
         foodrelationship = get_list_or_404(FoodItemRelationship, type_id=self.kwargs['type_id'])
         context['food'] = MenuItem.objects.filter(items__in=foodrelationship).values().order_by('id')
-        context['types'] = FoodType.objects.all()
+        # context['types'] = FoodType.objects.all()
         return context
 
 
