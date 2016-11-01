@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import get_list_or_404
 from django.http import Http404
 from .models import FoodType, MenuItem, FoodItemRelationship
 from django.views import generic

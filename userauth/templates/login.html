@@ -1,6 +1,6 @@
-{% extends 'navbar.html' %}
+{% block title %}Log In{% endblock %}
 {% block content %}
-    <h1>Third-party authentication demo</h1>
+    <h1>Log In</h1>
     <p>
         {% if user and not user.is_anonymous %}
         Hello {{ user }}!
